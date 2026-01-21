@@ -1,0 +1,12 @@
+{
+  "id": "fake-salesforce",
+  "label": "Fake Salesforce – Governed Agent Demo",
+  "system": "Salesforce",
+  "title": "Salesforce Account Triage Agent",
+  "problem": "Summarize account health + pipeline risks from CRM data and draft a next-step email. Must not send messages or modify opportunity stages without approval.",
+  "approvals": "0",
+  "sensitivity": "Internal",
+  "allowed": ["Read", "Draft"],
+  "disallowed": ["Send externally", "Modify records without approval"],
+  "obligations": ["log_trace", "mask_sensitive", "attach_freshness_ts"]
+}
