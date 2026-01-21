@@ -1,0 +1,42 @@
+[
+  {
+    "id": "demo_salesforce",
+    "name": "Salesforce \u2014 Sales Ops Assistant",
+    "system": "Salesforce",
+    "problem_statement": "Reps want an agent to summarize account health and draft next-step emails using opportunity + activity context, without sending messages or changing stages automatically.",
+    "safe_path": "0 approvals: read + summarize + draft email (no send).",
+    "risky_path": "2 approvals: update opportunity stage or send email externally (Sales Manager + Compliance)."
+  },
+  {
+    "id": "demo_workday",
+    "name": "Workday \u2014 HR Policy & Onboarding",
+    "system": "Workday",
+    "problem_statement": "Managers ask onboarding questions; policies are scattered. Create an agent that answers policy questions and drafts onboarding checklists. Access to employee profile data must require HR + Privacy approvals.",
+    "safe_path": "0 approvals: answer from approved policy sources + draft checklist template.",
+    "risky_path": "2 approvals: use employee profile fields to tailor onboarding plan (HR + Privacy)."
+  },
+  {
+    "id": "demo_servicenow",
+    "name": "ServiceNow \u2014 IT Helpdesk Triage",
+    "system": "ServiceNow",
+    "problem_statement": "Employees raise IT incidents. Create an agent to triage, suggest fixes, and route to resolver groups. Closing tickets automatically requires approvals.",
+    "safe_path": "0 approvals: read incident + draft response + suggest routing.",
+    "risky_path": "2 approvals: auto-close ticket or modify priority/assignment (IT Manager + Risk)."
+  },
+  {
+    "id": "demo_aws",
+    "name": "AWS \u2014 Incident Response Runbook",
+    "system": "AWS",
+    "problem_statement": "When alarms fire, create an agent to diagnose and recommend/run a standard runbook. Remediation actions require On-call + Security approvals.",
+    "safe_path": "0 approvals: diagnose + recommend runbook steps.",
+    "risky_path": "2 approvals: execute remediation (restart/scale/block traffic) (On-call Lead + Security)."
+  },
+  {
+    "id": "demo_n8n",
+    "name": "n8n \u2014 Cross-App Workflow Orchestrator",
+    "system": "n8n",
+    "problem_statement": "Create an agent to orchestrate workflows across ServiceNow + Slack + Jira based on incident patterns. Production workflow changes require Platform Owner approval.",
+    "safe_path": "0 approvals: notify Slack + create draft Jira ticket.",
+    "risky_path": "1\u20132 approvals: publish/modify production workflow (Platform Owner + Risk if sensitive)."
+  }
+]

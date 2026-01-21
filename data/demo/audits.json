@@ -1,0 +1,41 @@
+[
+  {
+    "event_id": "EVT-9001",
+    "run_id": "RUN-1001",
+    "agent_id": "AGT-003",
+    "event": "policy_decision",
+    "result": "ALLOW",
+    "obligations": [
+      "log_trace",
+      "mask_sensitive",
+      "attach_freshness_ts"
+    ],
+    "ts": "2026-01-21T04:58:25Z"
+  },
+  {
+    "event_id": "EVT-9002",
+    "run_id": "RUN-1002",
+    "agent_id": "AGT-002",
+    "event": "approval_requested",
+    "result": "PENDING",
+    "obligations": [
+      "route_to_hr",
+      "route_to_privacy",
+      "hold_execution"
+    ],
+    "ts": "2026-01-21T04:58:25Z"
+  },
+  {
+    "event_id": "EVT-9003",
+    "run_id": "RUN-1003",
+    "agent_id": "AGT-004",
+    "event": "policy_decision",
+    "result": "DENY",
+    "obligations": [
+      "deny_with_reason",
+      "log_trace",
+      "suggest_safe_alternative"
+    ],
+    "ts": "2026-01-21T04:58:25Z"
+  }
+]

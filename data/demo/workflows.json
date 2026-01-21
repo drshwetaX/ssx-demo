@@ -1,0 +1,82 @@
+[
+  {
+    "run_id": "RUN-1001",
+    "agent_id": "AGT-003",
+    "agent_name": "IT Triage (ServiceNow)",
+    "scenario": "ServiceNow incident triage",
+    "trigger": "Ticket INC-10422 created",
+    "decision": "ALLOW",
+    "approval_path": "0 approvals",
+    "steps": [
+      {
+        "name": "Ingest incident",
+        "status": "done"
+      },
+      {
+        "name": "Classify category",
+        "status": "done"
+      },
+      {
+        "name": "Draft response + resolution",
+        "status": "done"
+      },
+      {
+        "name": "Recommend resolver group",
+        "status": "done"
+      }
+    ],
+    "ts": "2026-01-21T04:58:25Z"
+  },
+  {
+    "run_id": "RUN-1002",
+    "agent_id": "AGT-002",
+    "agent_name": "Onboarding Guide (Workday)",
+    "scenario": "Workday onboarding plan generation",
+    "trigger": "Manager request for tailored plan",
+    "decision": "REQUIRES_APPROVAL",
+    "approval_path": "2 approvals (HR + Privacy)",
+    "steps": [
+      {
+        "name": "Collect inputs",
+        "status": "done"
+      },
+      {
+        "name": "Policy decision",
+        "status": "done"
+      },
+      {
+        "name": "Request approvals",
+        "status": "waiting"
+      },
+      {
+        "name": "Generate plan",
+        "status": "blocked"
+      }
+    ],
+    "ts": "2026-01-21T04:58:25Z"
+  },
+  {
+    "run_id": "RUN-1003",
+    "agent_id": "AGT-004",
+    "agent_name": "Runbook Responder (AWS)",
+    "scenario": "AWS alarm diagnosis",
+    "trigger": "CloudWatch ALARM CPUHigh",
+    "decision": "DENY",
+    "approval_path": "N/A (insufficient scope)",
+    "steps": [
+      {
+        "name": "Read alarm metadata",
+        "status": "done"
+      },
+      {
+        "name": "Attempt remediation",
+        "status": "blocked"
+      },
+      {
+        "name": "Explain denial + next steps",
+        "status": "done"
+      }
+    ],
+    "ts": "2026-01-21T04:58:25Z"
+  }
+]
