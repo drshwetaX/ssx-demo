@@ -1,0 +1,62 @@
+[
+  {
+    "agent_id": "AGT-001",
+    "name": "Case Copilot (Salesforce)",
+    "system": "Salesforce",
+    "purpose": "Summarize account & opportunity health; draft outreach; propose next steps",
+    "autonomy": "L2",
+    "approval_mode": "0-approval (draft-only)",
+    "risk_tier": "Medium",
+    "status": "Active",
+    "owner": "Sales Ops",
+    "last_activity": "2026-01-21T04:58:25Z"
+  },
+  {
+    "agent_id": "AGT-002",
+    "name": "Onboarding Guide (Workday)",
+    "system": "Workday",
+    "purpose": "Answer HR policy questions; draft onboarding checklist tailored by role/location",
+    "autonomy": "L2",
+    "approval_mode": "2-approvals (HR + Privacy) when employee data used",
+    "risk_tier": "High",
+    "status": "Draft",
+    "owner": "HR Platforms",
+    "last_activity": "2026-01-21T04:58:25Z"
+  },
+  {
+    "agent_id": "AGT-003",
+    "name": "IT Triage (ServiceNow)",
+    "system": "ServiceNow",
+    "purpose": "Triage incidents, suggest fixes, route to resolver group, create drafts",
+    "autonomy": "L2",
+    "approval_mode": "0-approval (recommend/draft); 2-approvals for auto-close",
+    "risk_tier": "Medium",
+    "status": "Active",
+    "owner": "ITSM",
+    "last_activity": "2026-01-21T04:58:25Z"
+  },
+  {
+    "agent_id": "AGT-004",
+    "name": "Runbook Responder (AWS)",
+    "system": "AWS",
+    "purpose": "Diagnose alerts; recommend or execute standard runbook with guardrails",
+    "autonomy": "L3",
+    "approval_mode": "2-approvals (On-call + Security) for remediation",
+    "risk_tier": "High",
+    "status": "Paused",
+    "owner": "SRE",
+    "last_activity": "2026-01-21T04:58:25Z"
+  },
+  {
+    "agent_id": "AGT-005",
+    "name": "Workflow Orchestrator (n8n)",
+    "system": "n8n",
+    "purpose": "Coordinate cross-app workflows across SN/SF/Slack/Jira with policy bounds",
+    "autonomy": "L3",
+    "approval_mode": "1-approval (Platform Owner) for production workflow changes",
+    "risk_tier": "High",
+    "status": "Active",
+    "owner": "Automation CoE",
+    "last_activity": "2026-01-21T04:58:25Z"
+  }
+]
